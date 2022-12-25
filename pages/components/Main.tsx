@@ -1,6 +1,7 @@
+import { FC } from 'react'
 import styles from '../../styles/Home.module.css'
 
-const Main = () => {
+const Main:FC = () => {
     return (
         <>
             <main className={styles.main}>
@@ -49,4 +50,4 @@ const Main = () => {
     )
 }
 
-export default Main
+export default Main;
