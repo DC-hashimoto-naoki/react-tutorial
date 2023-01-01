@@ -1,18 +1,12 @@
 import { FC } from 'react'
 import styles from '../../styles/Home.module.css'
+import Header from './Header'
 
 const Main:FC = () => {
     return (
         <>
             <main className={styles.main}>
-                <h1 className={styles.title}>
-                    Welcome to <a href="https://nextjs.org">Index.js</a>
-                </h1>
-
-                <p className={styles.description}>
-                    Get started by editing{' '}
-                    <code className={styles.code}>pages/index.tsx</code>
-                </p>
+                <Header page={"index"} />
 
                 <div className={styles.grid}>
                     <a href="https://nextjs.org/docs" className={styles.card}>
