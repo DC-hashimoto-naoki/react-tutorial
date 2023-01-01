@@ -2,11 +2,16 @@ import { FC } from 'react'
 import styles from '../../styles/Home.module.css'
 import Header from './Header'
 
-const Main:FC = () => {
+const Main: FC = () => {
     return (
         <>
             <main className={styles.main}>
-                <Header page={"index"} />
+                <Header
+                    page={"index"}
+                    onclick={()=> alert('クリック')}
+                >
+                    AAA
+                </Header>
 
                 <div className={styles.grid}>
                     <a href="https://nextjs.org/docs" className={styles.card}>
