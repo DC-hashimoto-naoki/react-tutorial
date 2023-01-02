@@ -1,10 +1,10 @@
-import { ReactNode } from 'react';
-import styles from '../../styles/Home.module.css'
+import React, { ReactNode, } from 'react';
+import styles from '../../styles/Header.module.css'
 
 type HeaderProps = {
     page?: string,
     component? : JSX.Element,
-    onclick? : object,
+    onclick? : (event: React.MouseEvent<HTMLButtonElement>) => void,
     children: ReactNode
 }
 
@@ -19,7 +19,7 @@ const Header = (props: HeaderProps) => {
 
             <p className={styles.description}>
                 Get started by editing{' '}
-                <code className={styles.code}>pages/{props.page}.tsx</code>
+                <code className={styles.code}>pages/{props.page}.tsx</code><br/>
                 <span className="font-bold underline">太文字になる</span>
             </p>
             <button className='text-orange-500' onClick={props.onclick}>ボタン</button>

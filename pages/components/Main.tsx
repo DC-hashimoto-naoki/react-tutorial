@@ -1,18 +1,23 @@
 import { FC } from 'react'
 import styles from '../../styles/Home.module.css'
 import Header from './Header'
+import Links from './Links'
 
-const Main: FC = () => {
+type MainProps = {
+    page : string
+}
+
+const Main: FC<MainProps> = (props: MainProps) => {
     return (
         <>
             <main className={styles.main}>
                 <Header
-                    page={"index"}
+                    page={props.page}
                     onclick={()=> alert('クリック')}
                 >
                     AAA
                 </Header>
-
+                <Links/>
                 <div className={styles.grid}>
                     <a href="https://nextjs.org/docs" className={styles.card}>
                         <h2>Documentation &rarr;</h2>
